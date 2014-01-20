@@ -25,6 +25,9 @@ module Forecasts
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
     # Remove default headers to allow content display from external domains (iframe inclusion)
     config.action_dispatch.default_headers = {
         'X-XSS-Protection' => '1; mode=block',

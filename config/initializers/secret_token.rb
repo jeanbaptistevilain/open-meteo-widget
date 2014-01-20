@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Forecasts::Application.config.secret_key_base = '83934c6e041298db59305656ddd71455222cebbfd355abc9ac726c1fe11e019d85e95513bb1b44d06cc0961e063bca6bad2bb3a7962c468442a1f2000129a399'
+Forecasts::Application.config.secret_token = 'bc3083492c28844ce5bd48b227a2ef0ab3d3de270081865231df78119b32df5bf8c49b857a7a83e99acb82da90f44e3ef85658712fbc251954943ea28924b7c9'
+

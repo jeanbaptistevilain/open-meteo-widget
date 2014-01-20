@@ -1,8 +1,5 @@
-require 'active_model'
-
 class Forecast
 
-  include ActiveModel::Model
   include ActiveModel::Serializers::JSON
 
   attr_accessor :times, :high_clouds, :low_clouds, :medium_clouds, :precipitations, :pressure, :rh, :temp

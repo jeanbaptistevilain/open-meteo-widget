@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '3.2.14'
 
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+#gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 #gem 'coffee-rails', '~> 4.0.0'
@@ -20,8 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 group 'test' do
-  gem 'minitest'
-  gem 'minitest-reporters', '>= 0.5.0'
+  #gem 'minitest'
+  #gem 'minitest-reporters', '>= 0.5.0'
   gem 'factory_girl_rails', '~> 4.0'
 end
 

@@ -29,7 +29,9 @@
       <% snippet = capture do %>
           <iframe src="<%= "http://#{Rails.application.config.deployment_url}/widget?lat=#{@latitude}&long=#{@longitude}" %>" frameborder="0" seamless="seamless" width="300px" height="320px" scrolling="no"></iframe>
       <% end %>
-      <code><%= escape_once snippet %></code>
+      <code>
+        <%= raw escape_once snippet %>
+      </code>
       <br/>
       <br/>
   <% end %>
