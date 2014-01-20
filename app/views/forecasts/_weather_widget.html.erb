@@ -1,0 +1,19 @@
+<div id="weather_iframe">
+  <ul id="forecasts">
+    <li class="current-weather">
+      <div class="forecast-date"><%= l Time.at(@weather.times.to_i), :locale => :fr, :format => :widget %></div>
+      <div class="<%= ForecastInterpreter.new(@weather).weather %> forecast-icon">&nbsp;</div>
+      <div class="forecast-text"><%= @weather.temp.to_f.round %>°C</div>
+    </li>
+    <li class="separator">&nbsp;</li>
+    <% @forecasts.each do |forecast| %>
+        <li class="weather-forecast">
+          <div class="<%= ForecastInterpreter.new(forecast).weather %> forecast-icon">&nbsp;</div>
+          <div class="forecast-text">
+            <%= l Time.at(forecast.times.to_i), :locale => :fr, :format => :widget %><br/>
+            <%= forecast.temp.to_f.round %>°C
+          </div>
+        </li>
+    <% end %>
+  </ul>
+</div>

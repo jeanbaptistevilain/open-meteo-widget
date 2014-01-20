@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'lato_light';
+    src: url('/lato/lato-light-webfont.eot');
+    src: url('/lato/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/lato/lato-light-webfont.woff') format('woff'),
+    url('/lato/lato-light-webfont.ttf') format('truetype'),
+    url('/lato/lato-light-webfont.svg#lato_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato_regular';
+    src: url('/lato/lato-regular-webfont.eot');
+    src: url('/lato/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/lato/lato-regular-webfont.woff') format('woff'),
+    url('/lato/lato-regular-webfont.ttf') format('truetype'),
+    url('/lato/lato-regular-webfont.svg#lato_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#widget_factory {
+    width: 600px;
+    margin: 0 auto;
+    font-family: 'lato_light', sans-serif;
+}
+
+#widget_factory h1, #widget_factory h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+#widget_factory p {
+    text-align: justify;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+#widget_factory form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#widget_factory input, #widget_factory label {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+#widget_factory hr {
+    margin: 50px 0;
+    height: 2px;
+    opacity: 0.6;
+    border: none;
+    background-color: #aaa;
+}
+
+#weather_iframe {
+    width: 280px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#forecasts {
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 1px 1px 4px #aaa;
+    -webkit-box-shadow: 1px 1px 4px #aaa;
+    -moz-box-shadow: 1px 1px 4px #aaa;
+}
+
+#forecasts li {
+    list-style-type: none;
+    clear: both;
+    font-family: 'lato_light', sans-serif;
+}
+
+#forecasts li.current-weather div.forecast-icon,
+#forecasts li.weather-forecast div.forecast-icon {
+    display: block;
+    float: left;
+    background-image: url(<%= asset_path('weather_icons.png') %>);
+    background-repeat: no-repeat;
+}
+
+#forecasts li.current-weather div.forecast-icon {
+    background-size: 360px 450px;
+    width: 90px;
+    height: 90px;
+}
+
+#forecasts li.weather-forecast div.forecast-icon {
+    background-size: 240px 300px;
+    width: 60px;
+    height: 60px;
+}
+
+#forecasts li.current-weather div.forecast-date {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'lato_regular', sans-serif;
+    padding-bottom: 10px;
+}
+
+#forecasts li.current-weather div.forecast-text {
+    font-size: 32px;
+    line-height: 80px;
+}
+
+#forecasts li.weather-forecast div.forecast-text {
+    padding-top: 8px;
+    padding-left: 6px;
+    font-size: 18px;
+    height: 60px;
+}
+
+#forecasts li.separator {
+    height: 12px;
+}
+
+.day-rain0-clouds0 {
+    background-position: 2.5% 1.5%;
+}
+
+.night-rain0-clouds0 {
+    background-position: 2.5% 49.7%;
+}
+
+.day-rain0-clouds1 {
+    background-position: 34% 1.5%;
+}
+
+.night-rain0-clouds1 {
+    background-position: 34% 25.5%;
+}
+
+.day-rain0-clouds2,
+.night-rain0-clouds2,
+.day-snow0-clouds2,
+.night-snow0-clouds2 {
+    background-position: 2.5% 25.5%;
+}
+
+.day-rain0-clouds3,
+.night-rain0-clouds3,
+.day-rain0-clouds4,
+.night-rain0-clouds4,
+.day-snow0-clouds3,
+.night-snow0-clouds3,
+.day-snow0-clouds4,
+.night-snow0-clouds4 {
+    background-position: 66% 1.5%;
+}
+
+.day-rain1-clouds2,
+.day-rain1-clouds3,
+.day-rain1-clouds4,
+.day-rain2-clouds2,
+.day-rain2-clouds3,
+.day-rain2-clouds4,
+.day-rain3-clouds2,
+.day-rain3-clouds3,
+.day-rain3-clouds4,
+.day-rain4-clouds2,
+.day-rain4-clouds3,
+.day-rain4-clouds4,
+.night-rain1-clouds2,
+.night-rain1-clouds3,
+.night-rain1-clouds4,
+.night-rain2-clouds2,
+.night-rain2-clouds3,
+.night-rain2-clouds4,
+.night-rain3-clouds2,
+.night-rain3-clouds3,
+.night-rain3-clouds4,
+.night-rain4-clouds2,
+.night-rain4-clouds4,
+.night-rain4-clouds3 {
+    background-position: 66% 25.5%;
+}
+
+.day-rain1-clouds1,
+.day-rain2-clouds1 {
+    background-position: 97.5% 25.5%;
+}
+
+.night-rain1-clouds1,
+.night-rain2-clouds1 {
+    background-position: 34% 49.7%;
+}
+
+.day-snow1-clouds1,
+.day-snow2-clouds1 {
+    background-position: 97.5% 73.7%;
+}
+
+.night-snow1-clouds1,
+.night-snow2-clouds1 {
+    background-position: 97.5% 49.7%;
+}
+
+.day-snow1-clouds2,
+.day-snow1-clouds3,
+.day-snow1-clouds4,
+.day-snow2-clouds2,
+.day-snow2-clouds3,
+.day-snow2-clouds4,
+.day-snow3-clouds2,
+.day-snow3-clouds3,
+.day-snow3-clouds4,
+.day-snow4-clouds2,
+.day-snow4-clouds3,
+.day-snow4-clouds4,
+.night-snow1-clouds2,
+.night-snow1-clouds3,
+.night-snow1-clouds4,
+.night-snow2-clouds2,
+.night-snow2-clouds3,
+.night-snow2-clouds4,
+.night-snow3-clouds2,
+.night-snow3-clouds3,
+.night-snow3-clouds4,
+.night-snow4-clouds2,
+.night-snow4-clouds3,
+.night-snow4-clouds4 {
+    background-position: 34% 73.7%;
+}

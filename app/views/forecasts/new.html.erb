@@ -1,0 +1,37 @@
+<div id="widget_factory">
+
+  <h1>Fabrique de widgets météo</h1>
+
+  <p>
+    Cette page vous permet de générer un widget météo à partir de vos coordonnées GPS.
+    Le widget généré peut ensuite facilement être intégré dans une page web à l'aide du code fourni en bas de page.
+  </p>
+
+  <%= form_tag('/forecasts') do %>
+
+      <%= label_tag :lat, 'Latitude' %>
+      <%= text_field_tag :lat, @latitude %>
+      <br/>
+      <%= label_tag :long, 'Longitude' %>
+      <%= text_field_tag :long, @longitude %>
+      <br/>
+      <%= submit_tag 'Générer le widget' %>
+
+  <% end %>
+
+  <hr/>
+
+  <% if @forecasts %>
+      <h2>Aperçu du widget :</h2>
+      <%= render :partial => 'weather_widget' %>
+      <hr/>
+      <h2>Récupération du code :</h2>
+      <% snippet = capture do %>
+          <iframe src="<%= "http://#{Rails.application.config.deployment_url}/widget?lat=#{@latitude}&long=#{@longitude}" %>" frameborder="0" seamless="seamless" width="300px" height="320px" scrolling="no"></iframe>
+      <% end %>
+      <code><%= escape_once snippet %></code>
+      <br/>
+      <br/>
+  <% end %>
+
+</div>
