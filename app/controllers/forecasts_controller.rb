@@ -2,6 +2,10 @@ class ForecastsController < ApplicationController
 
   SAMPLE_TIME = 12
 
+  def index
+    redirect_to :action => 'new'
+  end
+
   def new
   end
 

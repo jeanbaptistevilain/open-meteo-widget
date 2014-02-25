@@ -1,10 +1,14 @@
 <div id="widget_factory">
 
   <h1>Fabrique de widgets météo</h1>
-
+  <hr/>
   <p>
-    Cette page vous permet de générer un widget météo à partir de vos coordonnées GPS.
+    Cette page vous permet de générer un widget donnant des prévisions météo locales à partir de vos coordonnées GPS.
     Le widget généré peut ensuite facilement être intégré dans une page web à l'aide du code fourni en bas de page.
+  </p>
+  <p>
+    Une prochaine version vous permettra de saisir directement votre adresse ici pour récupérer vos prévisions locales. En attendant, vous pouvez utiliser
+    des sites comme <a href="http://www.openstreetmap.org">www.openstreetmap.org</a> ou Google Maps pour récupérer vos coordonnées GPS.
   </p>
 
   <%= form_tag('/forecasts') do %>
@@ -24,6 +28,9 @@
   <% if @forecasts %>
       <h2>Aperçu du widget :</h2>
       <%= render :partial => 'weather_widget' %>
+      <br/>
+      <br/>
+      <em>Note : le widget a un fond transparent et prendra donc la couleur de fond présente sur votre site.</em>
       <hr/>
       <h2>Récupération du code :</h2>
       <% snippet = capture do %>
@@ -34,6 +41,26 @@
       </code>
       <br/>
       <br/>
-  <% end %>
+      <br/>
+      <br/>
+      <hr/>
+<% end %>
+
+  <p>
+    Cette fabrique de widget est un projet Open Source qui s'appuie sur les données de prévisions météo fournies par l'<a href="http://openmeteofoundation.org/">Open Meteo Foundation</a>.
+    Le développement de la fabrique a été initié par <a href="http://hotentic.com">Hôtentic</a>.
+  </p>
+  <p>
+    Nous vous invitons à utiliser cette fabrique pour générer votre widget, afficher les prévisions locales sur votre site web...
+    Et nous faire part de vos commentaires en retour pour que nous puissions améliorer l'outil.<br/>
+    Le code (Open) source de la fabrique est disponible <a href="https://github.com/jeanbaptistevilain/open-meteo-widget">sur Github</a>. La documentation concernant les données de prévisions
+    est disponible sur le <a href="https://openmeteoforecast.org">wiki Open Meteo Forecast</a>.
+  </p>
+  <div class="logo">
+    <%= image_tag 'logo_openmetf.png', :alt => 'logo open meteo foundation' %>
+  </div>
+  <div class="logo">
+    <%= image_tag 'logo_400_no_bg.png', :alt => 'logo hotentic' %>
+  </div>
 
 </div>

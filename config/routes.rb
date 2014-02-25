@@ -1,6 +1,6 @@
 Forecasts::Application.routes.draw do
 
-  resources :forecasts, :only => [:new, :create]
+  resources :forecasts, :only => [:new, :index, :create]
 
   get '/widget' => 'forecasts#widget'
 
